@@ -71,4 +71,23 @@ void selectionSort(din_Array *array){
 
 void directInsertionSort(din_Array *array){
     int i,j;
+    for(i = 1; i < array->size; i++){
+        int temp = array->elements[i];
+        int j = i - 1;
+        while(j >= 0 && array->elements[j] > temp){
+            array->elements[j + 1] = array->elements[j];
+            j -= 1;
+        }
+        array->elements[j + 1] = temp;
+    }
+}
+
+void binaryInsertionSort(din_Array *array){
+    int i,j, temp;
+    for(i = 0; i < array->size; i++){
+        temp = array->elements[i + 1];
+        if(temp < array->elements[i/2]){
+            
+        }
+    }
 }
