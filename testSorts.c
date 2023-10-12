@@ -20,7 +20,9 @@ int main(){
     // bubbleSort(arr);
     // shakerSort(arr);
     // selectionSort(arr);
-
+    //directInsertionSort(arr);
+    //binaryInsertionSort(arr);
+    shellSort(arr);
     show_Array(array);
     
 }
