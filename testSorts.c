@@ -24,7 +24,6 @@ int main(){
     //binaryInsertionSort(arr);
     shellSort(arr);
     show_Array(array);
-    
 }
 
 
