@@ -22,7 +22,8 @@ int main(){
     // selectionSort(arr);
     //directInsertionSort(arr);
     //binaryInsertionSort(arr);
-    shellSort(arr);
+    // shellSort(arr);
+    quickSort(arr,0,arr->size);
     show_Array(array);
 }
 
