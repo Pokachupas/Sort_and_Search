@@ -120,3 +120,30 @@ void shellSort(din_Array *array){
         h /= 2;
     }
 }
+
+void quickSort(din_Array *array, int inicio, int fin){
+    int izquierda = inicio;
+    int derecha = fin;
+    int pivote = array->elements[(izquierda + derecha)/2];
+    do{
+        while(array->elements[izquierda] < pivote && izquierda < fin){
+            izquierda++;
+        }
+        while(array->elements[derecha] > pivote && derecha > inicio){
+            derecha--;
+        }
+        if(izquierda <= derecha){
+            int temp = array->elements[izquierda];
+            array->elements[izquierda] = array->elements[derecha];
+            array->elements[derecha] = temp; 
+            izquierda++;
+            derecha--;
+        }
+    }while(izquierda <= derecha);
+    if(inicio <= derecha){
+        quickSort(array,inicio,derecha);
+    }
+    if(fin >= izquierda){
+        quickSort(array,izquierda,fin);
+    }
+}
